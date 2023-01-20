@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginpage</title>
+    <style>
+            body {
+            background-color: aqua;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .form {
+            background-color: bisque;
+            color: aqua;
+            border-radius: 5px;
+            width: 25px;
+            height: 70px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <h1>Loginpage</h1>
+        <p>Username:</p>
+        <input type="text" placeholder="enter username" required="required" id="username">
+        <p>Password:</p>
+        <input type="password" placeholder="enter password" required="required" id="password"><br>
+        <input type="submit" value="Login" onclick="validate()"><br>
+    </form>
+    <script>
+        function validate() {
+            var user = document.getElementById('username').value
+            var pass = document.getElementById('password').value
+            list = {
+                "anisha": 'ani03',
+                "pooja": 'poo03'
+            }
+            for (let value in list) {
+                if (user == value && pass == list[value]) {
+                    alert("login succesfully");
+                    return true
+
+                }
+            }
+
+            alert("login failed,enter correct details");
+            return false
+
+        }
+    </script>
+
+</body>
+
+</html>
